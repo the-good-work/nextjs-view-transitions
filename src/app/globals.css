@@ -24,6 +24,18 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+  overflow: auto;
+}
+
+body > * {
+  transition: opacity ease-out 0.5s;
+  pointer-events: unset;
+}
+
+body.transition-out > * {
+  opacity: 0;
+  pointer-events: none;
 }
 
 @layer utilities {
